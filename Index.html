@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopSphere | Smart Shopping, Simplified.</title>
+    <meta
+      name="description"
+      content="Shop premium tech, style, home essentials and more at ShopSphere."
+    />
+    <meta
+      property="og:title"
+      content="ShopSphere | Smart Shopping, Simplified."
+    />
+    <meta
+      property="og:description"
+      content="Discover essentials curated for every day."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://shopsphere.example/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link href="animation.cssnn" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="progress-track">
+      <div id="scrollProgress" class="progress-bar"></div>
+    </div>
+    <a class="skip-link" href="#mainContent">Skip to content</a>
+    <div class="topbar py-2 d-none d-lg-block">
+      <div class="container d-flex justify-content-between small">
+        <span
+          ><i class="bi bi-truck me-1"></i>Free shipping on orders over
+          $75</span
+        ><span>Need help? <a href="contact.html">Contact support</a></span>
+      </div>
+    </div>
+    <nav
+      class="navbar navbar-expand-lg sticky-top navbar-light"
+      aria-label="Primary navigation"
+    >
+      <div class="container py-2">
+        <a
+          class="navbar-brand fw-bold"
+          href="index.html"
+          aria-label="ShopSphere home"
+          >Shop<span>Sphere</span></a
+        >
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileNav"
+          aria-controls="mobileNav"
+        >
+          <i class="bi bi-list fs-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="desktopNav">
+          <ul class="navbar-nav mx-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="nav-search d-none d-xl-flex" role="search">
+            <label class="visually-hidden" for="navSearch"
+              >Search products</label
+            ><input
+              id="navSearch"
+              class="form-control"
+              type="search"
+              placeholder="Search products"
+            /><button class="btn" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <div class="nav-actions ms-lg-3">
+            <button
+              id="themeToggle"
+              class="icon-button"
+              aria-label="Switch color theme"
+            >
+              <i class="bi bi-moon-stars"></i></button
+            ><a
+              class="icon-button position-relative"
+              href="wishlist.html"
+              aria-label="Wishlist"
+              ><i class="bi bi-heart"></i
+              ><span id="wishlistCount" class="count-badge">0</span></a
+            ><a
+              class="icon-button position-relative"
+              href="cart.html"
+              aria-label="Shopping cart"
+              ><i class="bi bi-bag"></i
+              ><span id="cartCount" class="count-badge">0</span></a
+            ><a
+              class="btn btn-primary btn-sm px-3 ms-1"
+              href="file:///C:/Users/DELL/OneDrive/Documents/Projetcs/Shposphere2/Index.html"
+              >Sign in</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="mobileNav"
+      aria-labelledby="mobileNavLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="mobileNavLabel" class="navbar-brand mb-0">
+          Shop<span>Sphere</span>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <form class="mb-4" role="search">
+          <div class="input-group">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search products"
+              aria-label="Search products"
+            /><button class="btn btn-primary">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+        <div class="nav flex-column gap-2">
+          <a class="nav-link active" href="index.html">Home</a
+          ><a class="nav-link" href="products.html">Products</a
+          ><a class="nav-link" href="categories.html">Categories</a
+          ><a class="nav-link" href="about.html">About</a
+          ><a class="nav-link" href="contact.html">Contact</a>
+        </div>
+        <hr />
+        <div class="d-flex gap-3">
+          <a href="wishlist.html"
+            >Wishlist <span id="mobileWishlistCount">(0)</span></a
+          ><a href="cart.html">Cart <span id="mobileCartCount">(0)</span></a>
+        </div>
+      </div>
+    </div>
+
+    <main id="mainContent">
+      <section class="hero-section">
+        <div
+          id="heroCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button
+            ><button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="hero hero-one">
+                <div class="container">
+                  <div class="row align-items-center min-vh-hero">
+                    <div class="col-lg-6">
+                      <span class="eyebrow">The everyday upgrade</span>
+                      <h1>Find your next <em>favorite</em> thing.</h1>
+                      <p>
+                        Thoughtfully chosen essentials, delivered with ease.
+                      </p>
+                      <div class="d-flex flex-wrap gap-3">
+                        <a href="#featured" class="btn btn-primary btn-lg"
+                          >Shop the collection
+                          <i class="bi bi-arrow-right ms-1"></i></a
+                        ><a
+                          href="categories.html"
+                          class="btn btn-outline-dark btn-lg"
+                          >Browse categories</a
+                        >
+                      </div>
+                      <div class="hero-trust mt-4">
+                        <span
+                          ><i class="bi bi-patch-check-fill"></i> Trusted
+                          products</span
+                        ><span
+                          ><i class="bi bi-arrow-repeat"></i> 30-day
+                          returns</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                      <div class="hero-image-wrap">
+                        <div class="hero-orbit orbit-one"></div>
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+                          width="600"
+                          height="550"
+                          fetchpriority="high"
+                          alt="Minimal wristwatch from our curated collection"
+                          class="hero-product-image"
+                        />
+                        <div class="floating-card">
+                          <span>New arrival</span
+                          ><strong>Modern essentials</strong
+                          ><i class="bi bi-stars"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="hero hero-two">
+                <div class="container">
+                  <div class="row align-items-center min-vh-hero">
+                    <div class="col-lg-6">
+                      <span class="eyebrow">Summer edit · up to 40% off</span>
+                      <h2>Design that feels <em>like you.</em></h2>
+                      <p>
+                        Refresh your space with pieces made for living well.
+                      </p>
+                      <a href="products.html" class="btn btn-primary btn-lg"
+                        >Explore the edit <i class="bi bi-arrow-right ms-1"></i
+                      ></a>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=85"
+                        width="600"
+                        height="550"
+                        loading="lazy"
+                        alt="Premium skincare collection"
+                        class="hero-product-image rounded-5"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-strip">
+        <div class="container">
+          <form id="heroSearch" class="search-card" role="search">
+            <i class="bi bi-search"></i
+            ><label class="visually-hidden" for="heroSearchInput"
+              >What are you looking for?</label
+            ><input
+              id="heroSearchInput"
+              type="search"
+              placeholder="What are you looking for?"
+              autocomplete="off"
+            /><button class="btn btn-primary">Search</button>
+            <div
+              id="searchResults"
+              class="search-results d-none"
+              aria-live="polite"
+            ></div>
+          </form>
+        </div>
+      </section>
+      <section class="section-space" aria-labelledby="categoriesHeading">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Shop by lifestyle</p>
+              <h2 id="categoriesHeading">Curated for every day.</h2>
+            </div>
+            <a class="text-link" href="categories.html"
+              >View all <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+            <a
+              class="col category-link"
+              href="products.html?category=Electronics"
+              ><span class="category-tile icon-blue"
+                ><i class="bi bi-headphones"></i></span
+              ><span>Electronics</span></a
+            ><a class="col category-link" href="products.html?category=Fashion"
+              ><span class="category-tile icon-peach"
+                ><i class="bi bi-handbag"></i></span
+              ><span>Fashion</span></a
+            ><a class="col category-link" href="products.html?category=Home"
+              ><span class="category-tile icon-green"
+                ><i class="bi bi-house-heart"></i></span
+              ><span>Home & living</span></a
+            ><a class="col category-link" href="products.html?category=Beauty"
+              ><span class="category-tile icon-lilac"
+                ><i class="bi bi-flower1"></i></span
+              ><span>Beauty</span></a
+            ><a class="col category-link" href="products.html?category=Fitness"
+              ><span class="category-tile icon-yellow"
+                ><i class="bi bi-bicycle"></i></span
+              ><span>Fitness</span></a
+            ><a
+              class="col category-link"
+              href="products.html?category=Accessories"
+              ><span class="category-tile icon-pink"
+                ><i class="bi bi-watch"></i></span
+              ><span>Accessories</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        id="featured"
+        class="section-space pt-0"
+        aria-labelledby="featuredHeading"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Handpicked for you</p>
+              <h2 id="featuredHeading">Featured finds</h2>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <button
+                class="product-scroll prev"
+                aria-label="Previous products"
+              >
+                <i class="bi bi-arrow-left"></i></button
+              ><button class="product-scroll next" aria-label="Next products">
+                <i class="bi bi-arrow-right"></i></button
+              ><a class="text-link d-none d-sm-inline" href="products.html"
+                >Shop all</a
+              >
+            </div>
+          </div>
+          <div
+            id="featuredProducts"
+            class="product-rail"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+      <section class="flash-sale">
+        <div class="container">
+          <div class="flash-shell">
+            <div class="row align-items-center">
+              <div class="col-lg-4">
+                <p class="section-kicker text-warning">Limited-time offer</p>
+                <h2>Flash sale<br /><span>Ends soon.</span></h2>
+                <p>Exceptional pieces. Exceptional prices.</p>
+                <div
+                  id="countdown"
+                  class="countdown"
+                  aria-label="Sale countdown"
+                >
+                  <div><b>08</b><small>Hours</small></div>
+                  <i>:</i>
+                  <div><b>42</b><small>Mins</small></div>
+                  <i>:</i>
+                  <div><b>19</b><small>Secs</small></div>
+                </div>
+                <a href="products.html?offer=flash" class="btn btn-warning mt-4"
+                  >Shop sale <i class="bi bi-arrow-up-right ms-1"></i
+                ></a>
+              </div>
+              <div class="col-lg-8 mt-4 mt-lg-0">
+                <div
+                  id="flashProducts"
+                  class="row row-cols-1 row-cols-md-2 g-3"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-space" aria-labelledby="trendingHeading">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">What’s popular now</p>
+              <h2 id="trendingHeading">Trending today</h2>
+            </div>
+            <a class="text-link" href="products.html"
+              >Discover more <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div
+            id="trendingProducts"
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"
+          ></div>
+        </div>
+      </section>
+      <section class="section-space pt-0">
+        <div class="container">
+          <div class="brand-strip">
+            <span>Trusted by people who choose better</span>
+            <div>
+              <strong>lumina</strong><strong>nordic</strong><strong>arc°</strong
+              ><strong>VANTA</strong><strong>minim.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonial-section section-space">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-4">
+              <p class="section-kicker">Customer stories</p>
+              <h2>Good shopping should feel this easy.</h2>
+              <p class="text-muted">
+                Thousands of customers come back for product quality and a
+                service that puts people first.
+              </p>
+              <div class="testimonial-controls">
+                <button
+                  data-bs-target="#testimonialCarousel"
+                  data-bs-slide="prev"
+                  aria-label="Previous testimonial"
+                >
+                  <i class="bi bi-arrow-left"></i></button
+                ><button
+                  data-bs-target="#testimonialCarousel"
+                  data-bs-slide="next"
+                  aria-label="Next testimonial"
+                >
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div
+                id="testimonialCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <blockquote>
+                      “ShopSphere makes discovering new favorites genuinely
+                      enjoyable. The packaging, delivery, and product quality
+                      feel considered from beginning to end.”
+                      <footer>
+                        <img
+                          src="https://i.pravatar.cc/80?img=47"
+                          width="48"
+                          height="48"
+                          alt="Portrait of Maya Chen"
+                        />
+                        <div>
+                          <strong>Maya Chen</strong
+                          ><span>Verified shopper</span>
+                        </div>
+                      </footer>
+                    </blockquote>
+                  </div>
+                  <div class="carousel-item">
+                    <blockquote>
+                      “The kind of online shopping experience I wish every store
+                      had: beautiful, simple, and full of things I actually
+                      want.”
+                      <footer>
+                        <img
+                          src="https://i.pravatar.cc/80?img=12"
+                          width="48"
+                          height="48"
+                          alt="Portrait of James Wilson"
+                        />
+                        <div>
+                          <strong>James Wilson</strong
+                          ><span>Verified shopper</span>
+                        </div>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="newsletter">
+        <div class="container">
+          <div class="newsletter-box">
+            <div>
+              <p class="section-kicker">Stay in the loop</p>
+              <h2>Inspiration, delivered.</h2>
+              <p>
+                Get early access to collections, offers, and stories worth
+                sharing.
+              </p>
+            </div>
+            <form id="newsletterForm" novalidate>
+              <label class="visually-hidden" for="newsletterEmail"
+                >Your email address</label
+              >
+              <div class="input-group">
+                <input
+                  id="newsletterEmail"
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email address"
+                  required
+                /><button class="btn btn-dark" type="submit">
+                  Subscribe <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+              <small id="newsletterMessage" aria-live="polite"
+                >No spam, ever. Unsubscribe anytime.</small
+              >
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-4">
+            <a class="navbar-brand" href="index.html"
+              >Shop<span>Sphere</span></a
+            >
+            <p class="mt-3">
+              Smart shopping, simplified. Intentional products for the way you
+              live now.
+            </p>
+            <div class="socials">
+              <a href="#" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i></a
+              ><a href="#" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i></a
+              ><a href="#" aria-label="Pinterest"
+                ><i class="bi bi-pinterest"></i></a
+              ><a href="#" aria-label="Twitter"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3>Shop</h3>
+            <a href="products.html">All products</a
+            ><a href="categories.html">Categories</a
+            ><a href="products.html?offer=sale">Sale</a
+            ><a href="wishlist.html">Wishlist</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3>Help</h3>
+            <a href="contact.html">Contact us</a><a href="faq.html">FAQs</a
+            ><a href="#">Shipping & returns</a><a href="#">Track order</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3>About</h3>
+            <a href="about.html">Our story</a><a href="#">Journal</a
+            ><a href="#">Careers</a><a href="#">Privacy</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3>Contact</h3>
+            <p>hello@shopsphere.com<br />+1 (800) 555-0198</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 ShopSphere. All rights reserved.</span
+          ><span>Made with intention <i class="bi bi-heart-fill"></i></span>
+        </div>
+      </div>
+    </footer>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="appToast"
+        class="toast border-0"
+        role="status"
+        aria-live="polite"
+      >
+        <div class="toast-body d-flex gap-2 align-items-center">
+          <i class="bi bi-check-circle-fill text-success"></i
+          ><span id="toastMessage">Added to cart.</span
+          ><button
+            type="button"
+            class="btn-close ms-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="quickViewModal"
+      tabindex="-1"
+      aria-labelledby="quickViewTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-3 z-3"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div id="quickViewContent"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
